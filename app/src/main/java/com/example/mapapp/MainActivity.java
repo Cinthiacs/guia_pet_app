@@ -24,10 +24,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn_abre_tela_fas = (Button) findViewById(R.id.abre_tela_fas);
+        btn_abre_tela_agroverde = (Button) findViewById(R.id.abre_tela_agroverde);
+        btn_abre_tela_bemlocao = (Button) findViewById(R.id.abre_tela_bemlocao);
 
-
-        btn_abre_tela_fas.setOnClickListener(c ->{
+        btn_abre_tela_fas.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this,TelaFasActivity.class);
+            startActivity(intent);
+        });
+        btn_abre_tela_agroverde.setOnClickListener(v ->{
+            Intent intent = new Intent(MainActivity.this,TelaAgroverdeActivity.class);
+            startActivity(intent);
+        });
+
+        btn_abre_tela_bemlocao.setOnClickListener(v ->{
+            Intent intent = new Intent(MainActivity.this,TelaBemLocaoActivity.class);
             startActivity(intent);
         });
 

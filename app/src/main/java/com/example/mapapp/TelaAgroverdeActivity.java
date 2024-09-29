@@ -10,7 +10,7 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import android.widget.Button;
 
-public class TelaFasActivity extends AppCompatActivity {
+public class TelaAgroverdeActivity extends AppCompatActivity {
     Button btn_volta;
     Button btn_saiba_mais;
 
@@ -18,7 +18,7 @@ public class TelaFasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_tela_fas);
+        setContentView(R.layout.activity_agroverde);
 
         btn_saiba_mais = findViewById(R.id.saiba_mais);
         btn_volta = findViewById(R.id.voltar);

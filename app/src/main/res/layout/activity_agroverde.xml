@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
     android:layout_width="match_parent"
-    android:background="#F1CCCC"
+    android:background="#D2DCA2"
     android:padding="30dp"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -14,7 +14,7 @@
         android:id="@+id/txt_titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Fundação Alexandra Schlumberger"
+        android:text="Agro Verde"
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:textColor="#0E0E0E"
@@ -63,13 +63,13 @@
             android:textSize="24sp"/>
 
         <ImageView
-            android:id="@+id/fas_img"
+            android:id="@+id/agroverde_img"
             android:layout_width="match_parent"
             android:layout_height="320dp"
             android:layout_margin="20dp"
-            android:contentDescription="Imagem_fas"
+            android:contentDescription="Imagem_agroverde"
             android:layout_centerInParent="true"
-            android:src="@drawable/alexandra_schlumberger" />
+            android:src="@drawable/agro_verde" />
 
     </LinearLayout>
 
