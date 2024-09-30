@@ -24,8 +24,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:text="A FAS - Fundação Alexandra Schlumberger é uma entidade legalmente constituída,\n
-         sem fins lucrativos, oferece serviços de qualidade a preços acessíveis para a população\n
-         menos favorecida economicamente, disponibilizando atendimento veterinário à caninos e felinos."
+        sem fins lucrativos, oferece serviços de qualidade a preços acessíveis para a população menos favorecida economicamente, disponibilizando atendimento veterinário à caninos e felinos."
         android:textSize="18sp"
         android:padding="16dp" />
     <LinearLayout

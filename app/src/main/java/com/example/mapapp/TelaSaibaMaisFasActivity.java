@@ -8,7 +8,11 @@ import android.os.Handler;
 import android.widget.Button;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
+import android.net.Uri;
+import android.content.Intent;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
+import android.content.pm.PackageManager;
 
 public class TelaSaibaMaisFasActivity extends AppCompatActivity {
 
@@ -45,15 +49,45 @@ public class TelaSaibaMaisFasActivity extends AppCompatActivity {
         handler.postDelayed(pageSwitcher, 3000);
         mViewPager.setAdapter(mCustomPagerAdapter);
 
+        btnAbreMapa = findViewById(R.id.btn_mapa);
+        btnAbreSite = findViewById(R.id.btn_abre_site);
+        btnTelefonar = findViewById(R.id.btn_telefonar);
+
+        btnAbreMapa.setOnClickListener(v -> {
+            Uri uri =
+                    Uri.parse("geo:0,0?q=R.+Humaitá+96");
+            Intent mapIntent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(mapIntent);
+        });
+
+        btnAbreSite.setOnClickListener(v -> {
+            Uri webpage = Uri.parse("https://www.fundacao.org.br/#");
+            Intent intent = new Intent(Intent.ACTION_VIEW, webpage);
+            startActivity(intent);
+        });
+
+        btnTelefonar.setOnClickListener(v -> {
+            Uri uri = Uri.parse("tel:1599999999");
+            Intent intent = new Intent(Intent.ACTION_CALL,uri);
+            int permissionCheck =
+                    ContextCompat.checkSelfPermission(
+                            this, android.Manifest.permission.CALL_PHONE);
+            if (permissionCheck != PackageManager.PERMISSION_GRANTED) {
+                ActivityCompat.
+                        requestPermissions(this,
+                                new String[]{
+                                        android.Manifest.permission.CALL_PHONE},1);
+            } else {
+                startActivity(intent);
+            }
+
+        });
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_fas), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
-        btnAbreMapa = findViewById(R.id.btn_mapa);
-        btnAbreSite = findViewById(R.id.btn_abre_site);
-        btnTelefonar = findViewById(R.id.btn_telefonar);
     }
 
     @Override
