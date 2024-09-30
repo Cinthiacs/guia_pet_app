@@ -2,10 +2,11 @@
 
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_agro_verde"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F1CCCC">
+    android:background="#D2DCA2">
 
     <!-- Parte do ViewPager para imagens -->
     <androidx.viewpager.widget.ViewPager
@@ -15,15 +16,49 @@
         android:layout_weight="2"
         android:contentDescription="Galeria de imagens da Agroverde"/>
 
-    <!-- Texto abaixo das imagens -->
     <TextView
         android:id="@+id/textViewDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:gravity="center"
-        android:text="AGROVERDE oferece uma gama de produtos, como rações, petiscos, aquarismo, piscinas, jardinagem, farmácia, selaria, e serviços especializados,\n
-        como orientação na farmácia e consulta veterinária."
+        android:text="AGROVERDE oferece uma gama de produtos, como rações, petiscos, aquarismo, piscinas, jardinagem, farmácia, selaria, e serviços especializados, como orientação na farmácia e consulta veterinária."
         android:textSize="18sp"
         android:padding="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <Button
+            android:id="@+id/btn_mapa"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FBFBFB"
+            android:layout_weight="1"
+            android:text="Ver no Mapa"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_abre_site"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FBFBFB"
+            android:layout_weight="1"
+            android:text="Abrir Site"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/btn_telefonar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#FBFBFB"
+            android:layout_weight="1"
+            android:text="Telefonar"
+            android:textColor="@color/black"/>
+    </LinearLayout>
 </LinearLayout>
+

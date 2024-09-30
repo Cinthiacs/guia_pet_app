@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_bem_locao"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F1CCCC">
+    android:background="#EDBC88">
 
     <!-- Parte do ViewPager para imagens -->
     <androidx.viewpager.widget.ViewPager
@@ -26,4 +27,41 @@
         Nossa missão é proporcionar um ambiente humanizado para nossos colaboradores, parceiros, clientes e seus pets, com excelência no atendimento e variedade de produtos e serviços."
         android:textSize="18sp"
         android:padding="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+    <Button
+        android:id="@+id/btn_mapa"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FBFBFB"
+        android:layout_weight="1"
+        android:text="Ver no Mapa"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_abre_site"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FBFBFB"
+        android:layout_weight="1"
+        android:text="Abrir Site"
+        android:textColor="@color/black"/>
+
+    <Button
+        android:id="@+id/btn_telefonar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FBFBFB"
+        android:layout_weight="1"
+        android:text="Telefonar"
+        android:textColor="@color/black"/>
+    </LinearLayout>
 </LinearLayout>
+
+

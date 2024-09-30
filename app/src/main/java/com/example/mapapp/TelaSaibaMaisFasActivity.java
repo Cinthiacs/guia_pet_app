@@ -1,9 +1,14 @@
 package com.example.mapapp;
 
+import androidx.core.graphics.Insets;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 import android.os.Handler;
+import android.widget.Button;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
+
 
 public class TelaSaibaMaisFasActivity extends AppCompatActivity {
 
@@ -15,6 +20,8 @@ public class TelaSaibaMaisFasActivity extends AppCompatActivity {
             R.drawable.fas_img2,
             R.drawable.fas_img3,
     };
+
+    Button btnAbreMapa,btnAbreSite, btnTelefonar;
 
     private Handler handler = new Handler();
     private int currentPage = 0;
@@ -37,6 +44,16 @@ public class TelaSaibaMaisFasActivity extends AppCompatActivity {
         mCustomPagerAdapter = new CustomPagerAdapter(this, mResources);
         handler.postDelayed(pageSwitcher, 3000);
         mViewPager.setAdapter(mCustomPagerAdapter);
+
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main_fas), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
+
+        btnAbreMapa = findViewById(R.id.btn_mapa);
+        btnAbreSite = findViewById(R.id.btn_abre_site);
+        btnTelefonar = findViewById(R.id.btn_telefonar);
     }
 
     @Override
