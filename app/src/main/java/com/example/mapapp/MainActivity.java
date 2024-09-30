@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,TelaFasActivity.class);
             startActivity(intent);
         });
+
         btn_abre_tela_agroverde.setOnClickListener(v ->{
             Intent intent = new Intent(MainActivity.this,TelaAgroverdeActivity.class);
             startActivity(intent);

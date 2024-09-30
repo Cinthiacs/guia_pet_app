@@ -12,7 +12,7 @@ import android.widget.Button;
 
 public class TelaAgroverdeActivity extends AppCompatActivity {
     Button btn_volta;
-    Button btn_saiba_mais;
+    Button btn_saiba_mais_agroverde;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +20,12 @@ public class TelaAgroverdeActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_agroverde);
 
-        btn_saiba_mais = findViewById(R.id.saiba_mais);
+        btn_saiba_mais_agroverde = findViewById(R.id.saiba_mais_agroverde);
         btn_volta = findViewById(R.id.voltar);
 
-        btn_saiba_mais.setOnClickListener(v ->{
-
+        btn_saiba_mais_agroverde.setOnClickListener(v ->{
+            Intent intent = new Intent(TelaAgroverdeActivity.this,TelaSaibaMaisAgroVerdeActivity.class);
+            startActivity(intent);
         });
 
 

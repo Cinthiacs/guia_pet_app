@@ -52,7 +52,7 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/saiba_mais"
+            android:id="@+id/saiba_mais_agroverde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="#FBFBFB"
